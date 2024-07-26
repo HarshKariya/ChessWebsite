@@ -1,0 +1,62 @@
+body{
+    background-color: #302e2b;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.squareRow{
+    width: 700px;
+    height: 70px;
+    display: flex;
+}
+
+.square {
+    height: 70px;
+    width: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-left: 5px; 
+}
+
+.white{
+    background-color: antiquewhite;
+}
+
+.black{
+    background-color: #769656;
+}
+
+.highlightYellow{
+    background: #f7f769;
+}
+
+
+.piece {
+    width: 70px;
+    height: 70px; 
+    cursor: pointer;
+    user-select: none; 
+}
+
+.captureColor{
+    background-color: #EE4B2B;
+    
+}
+
+
+
+.highlight {
+    width: 30px; 
+    height: 30px; 
+    display: block;
+    margin: auto; 
+    border-radius: 50%; 
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
