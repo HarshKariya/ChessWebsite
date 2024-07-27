@@ -22,6 +22,13 @@ function globalStateRender(){
 
             }
          if(element.piece != null){
+         }else{
+            console.log(element);
+            const el =document.getElementById(element.id);
+                const piece = Array.from(el.getElementsByClassName("piece"));
+                piece.forEach((element) => {
+                    el.removeChild(element);
+                });
          }
         });
     });
@@ -37,9 +44,11 @@ function moveElement(piece, id) {
     flatData.forEach((el) => {
         if (el.id == previous_position) {
             delete el.piece; 
+            console.log(el);
         }
         if (el.id == id) {
             el.piece = piece; 
+            console.log(el);
         }
     });
 

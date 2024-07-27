@@ -23,7 +23,9 @@ function clearHighlightLocal(){
 }
 
 function movePieceFromXToY(from,to){
-    // console.log(from,to);
+    to.piece=from.piece;
+    from.piece=null;
+    globalStateRender();
 }
 
 function whitePawnClick({ piece }) {
