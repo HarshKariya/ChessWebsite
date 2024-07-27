@@ -1,12 +1,24 @@
 import { initGame } from "./Data/data.js";
-import { initGameRender } from "./Render/main.js";
 import { GlobalEvent } from "./Events/global.js";
+import { initGameRender } from "./Render/main.js";
 
+// will be usefull till game ends
+const globalState = initGame();
+let keySquareMapper = {};
 
-const globalState = initGame()
+globalState.flat().forEach((square) => {
+  keySquareMapper[square.id] = square;
+});
 
 initGameRender(globalState);
 GlobalEvent();
 
-export{globalState};
+String.prototype.replaceAt = function (index, replacement) {
+  return (
+    this.substring(0, index) +
+    replacement +
+    this.substring(index + replacement.length)
+  );
+};
 
+export { globalState, keySquareMapper };
